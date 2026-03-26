@@ -2,15 +2,6 @@
 
 Bu, iş başvuruları için kullanabileceğiniz profesyonel bir otobiyografi/portföy web sitesidir.
 
-## Özellikler
-
-- ✨ Modern ve profesyonel tasarım
-- 🎨 Koyu tema (lacivert ve siyah tonları)
-- 🌊 Akıcı animasyonlar ve geçişler
-- 📱 Tamamen responsive (mobil uyumlu)
-- 🖼️ Görsel odaklı tasarım
-- ⚡ Hızlı ve optimize edilmiş
-
 ## Görseller
 
 Web sitesinin düzgün çalışması için aşağıdaki görselleri `images` klasörüne eklemeniz gerekmektedir:
@@ -37,9 +28,7 @@ Siteyi **localhost** üzerinde görmek için:
 
 **Yöntem 1 – PowerShell sunucusu (önerilen, ekstra kurulum yok):**
 ```powershell
-cd "C:\Users\jinda\OneDrive\Masaüstü\portfolio-website"
-powershell -ExecutionPolicy Bypass -File .\start-server.ps1
-```
+
 Ardından tarayıcıda **http://localhost:8080** adresini açın.
 
 **Yöntem 2 – Python (yüklüyse):**
