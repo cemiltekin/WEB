@@ -27,11 +27,7 @@ Web sitesinin düzgün çalışması için aşağıdaki görselleri `images` kla
 Siteyi **localhost** üzerinde görmek için:
 
 **Yöntem 1 – PowerShell sunucusu (önerilen, ekstra kurulum yok):**
-```powershell
-
-Ardından tarayıcıda **http://localhost:8080** adresini açın.
-
-**Yöntem 2 – Python (yüklüyse):**
+– Python (yüklüyse):**
 ```bash
 python -m http.server 8080
 ```
