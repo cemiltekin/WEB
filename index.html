@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portföy - Profesyonel Tanıtım</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-yH6p7ZK0ZLhUy5tKiN6c1iepO98cDx7uqpW0xX+7M/9gqkU+YF1e0iR7VwLQ3ZVq3Lm6U1WfcS6XQ4CkH+0m3A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@500;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="loading">
+    <!-- Preloader -->
+    <div id="preloader">
+        <div class="preloader-inner">
+            <img
+                id="preloader-logo"
+                src="images/logo.png.jpg"
+                alt="Cemil Tekin Logo"
+            />
+            <div id="progress-value">0%</div>
+            <div class="progress-bar-wrapper">
+                <div class="progress-bar-fill" id="progress-bar-fill"></div>
+            </div>
+        </div>
+    </div>
+
+    <div id="app">
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">Cemil TEKİN</div>
+            <ul class="nav-menu">
+                <li><a href="#anasayfa" class="nav-link">Ana Sayfa</a></li>
+                <li><a href="#hakkimda" class="nav-link">Hakkımda</a></li>
+                <li><a href="#deneyim" class="nav-link">Deneyim</a></li>
+                <li><a href="#egitim" class="nav-link">Eğitim</a></li>
+                <li><a href="#beceriler" class="nav-link">Beceriler</a></li>
+                <li><a href="#iletisim" class="nav-link">İletişim</a></li>
+            </ul>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="anasayfa" class="hero">
+        <div class="hero-background">
+            <div class="gradient-orb orb-1"></div>
+            <div class="gradient-orb orb-2"></div>
+            <div class="gradient-orb orb-3"></div>
+        </div>
+        <div class="hero-content">
+            <div class="hero-image-container">
+                <div class="hero-image-wrapper">
+                    <img src="images/benfoto.jpg" alt="Profil Fotoğrafı" class="hero-image">
+                    <div class="image-border"></div>
+                </div>
+            </div>
+            <h1 class="hero-title">
+                <span class="title-line">Merhaba, Ben </span>
+                <span class="title-name">Cemil Tekin</span>
+            </h1>
+            <p class="hero-subtitle">Yazılım Mühendisliği Öğrencisi</p>
+            <div class="hero-buttons">
+                <a href="#hakkimda" class="btn btn-primary">Hakkımda</a>
+                <a href="#iletisim" class="btn btn-secondary">İletişim</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="hakkimda" class="section about-section">
+        <div class="container">
+            <h2 class="section-title">Hakkımda</h2>
+            <div class="about-content">
+                <div class="about-image">
+                    <img src="images/ben2.jpeg" alt="Hakkımda" class="about-img">
+                </div>
+                <div class="about-text">
+                    <p class="about-intro">
+                        İstinye Üniversitesi Yazılım Mühendisliği (İngilizce) 3. sınıf öğrencisiyim ve ölçeklenebilir yazılım sistemleri,
+                        problem çözme ve modern web teknolojilerine derin bir ilgi duyuyorum. Akademik yolculuğumu,
+                        gerçek dünya problemlerine çözüm üreten projelerle güçlendirmeye odaklanıyorum.
+                    </p>
+                    <p>
+                        11 yıllık lisanslı basketbol geçmişim ve farklı branşlarda aldığım sporcu lisansları, disiplin, takım çalışması
+                        ve baskı altında soğukkanlı kalma becerisi kazanmamı sağladı. Bu özellikleri bugün kod yazarken de;
+                        odaklanma, istikrar ve pes etmeme motivasyonu olarak kullanıyorum.
+                    </p>
+                    <p>
+                        Python, C#, C++, HTML/CSS ve JavaScript gibi teknolojilerle çalışıyor; aynı zamanda AutoCAD ve CNC freze deneyimim
+                        sayesinde teknik çizim ve üretim süreçlerini de anlayabiliyorum. Hedefim, hem teknik hem de insan odaklı
+                        becerilerimi birleştirerek, kullanıcıya değer katan ve uzun vadede sürdürülebilir yazılım projelerinde yer almak.
+                    </p>
+                    <div class="about-stats">
+                        <div class="stat-item">
+                            <div class="stat-number">3+</div>
+                            <div class="stat-label">Yıl Profesyonel Deneyim</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">12+</div>
+                            <div class="stat-label">Akademik & Kişisel Proje</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number">3</div>
+                            <div class="stat-label">Farklı Sektör Deneyimi</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="deneyim" class="section experience-section">
+        <div class="container">
+            <h2 class="section-title">Deneyim</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date"> 2024 - Günümüz</div>
+                        <h3 class="timeline-title">Depo Personeli</h3>
+                        <h4 class="timeline-company">Converse (Eren Holding)</h4>
+                        <p class="timeline-description">
+                            Hızlı tempolu bir lojistik ortamında stok takibi ve sipariş akışını yönettim. 
+                            Doğru stok hareketi sağlayarak depo operasyonlarının verimli çalışmasına katkıda bulundum.
+                            
+                        </p>
+                        <ul class="timeline-skills">
+                            <li>Stok Takibi</li>
+                            <li>Operasyon Yönetimi</li>
+                            <li>Takım Çalışması</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2023 - 2024</div>
+                        <h3 class="timeline-title">Matematik Öğretmeni</h3>
+                        <h4 class="timeline-company">Bil Koleji</h4>
+                        <p class="timeline-description">
+                            Farklı öğrenme stillerine uygun, ilgi çekici matematik dersleri tasarladım ve uyguladım. 
+                        </p>
+                        <ul class="timeline-skills">
+                            <li>Eğitim & Mentorluk</li>
+                            <li>Öğrenci Desteği</li>
+                            <li>Sunum Becerileri</li>
+                            <li>İletişim</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-marker"></div>
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021</div>
+                        <h3 class="timeline-title">CNC Freze Operatörü</h3>
+                        <h4 class="timeline-company">Asevo Technic</h4>
+                        <p class="timeline-description">
+                            Teknik çizimleri yorumlayarak üretim şemaları hazırladım ve CNC freze makinelerini kullanarak 
+                            hassas mekanik parçalar ürettim.
+                        </p>
+                        <ul class="timeline-skills">
+                            <li>CNC Freze</li>
+                            <li>Teknik Çizim</li>
+                            <li>Dikkat & Hassasiyet</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education Section -->
+    <section id="egitim" class="section education-section">
+        <div class="container">
+            <h2 class="section-title">Eğitim</h2>
+            <div class="education-grid">
+                <div class="education-card">
+                    <div class="education-icon">
+                        <img src="images/graduation-cap-solid-full.svg" alt="Mezuniyet ikonu" class="education-icon-image">
+                    </div>
+                    <div class="education-year">Devam Ediyor</div>
+                    <h3 class="education-degree">Yazılım Mühendisliği (İngilizce)</h3>
+                    <h4 class="education-university">İstinye Üniversitesi, İstanbul</h4>
+                    <p class="education-description">
+                        Yazılım mühendisliği lisans programında ölçeklenebilir yazılım sistemleri, algoritmalar 
+                        ve modern web teknolojileri üzerine eğitim alıyorum.
+                    </p>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <img src="images/book-solid-full.svg" alt="Kitap ikonu" class="education-icon-image">
+                    </div>
+                    <div class="education-year">Mezun</div>
+                    <h3 class="education-degree">Lise Diploması</h3>
+                    <h4 class="education-university">Mehmet Adnan Özçelik Anadolu Lisesi, Mersin</h4>
+                    <p class="education-description">
+                        Sayısal ağırlıklı lise eğitimimi başarıyla tamamladım ve üniversiteye geçiş sürecinde 
+                        yazılım ve teknoloji alanına odaklandım.
+                    </p>
+                </div>
+                <div class="education-card">
+                    <div class="education-icon">
+                        <img src="images/certificate-solid-full.svg" alt="Sertifika ikonu" class="education-icon-image">
+                    </div>
+                    <div class="education-year">Sürekli</div>
+                    <h3 class="education-degree">Sertifikalar & Kurslar</h3>
+                    <h4 class="education-university">Online Platformlar</h4>
+                    <p class="education-description">
+                        Modern Web Development Bootcamp: From Zero to Industry-Ready (Udemy) başta olmak üzere, 
+                        web geliştirme ve yazılım temelleri üzerine çevrimiçi eğitimler tamamladım.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>  
+
+    <!-- Skills Section -->
+    <section id="beceriler" class="section skills-section">
+        <div class="container">
+            <h2 class="section-title">Beceriler</h2>
+            <div class="skills-container">
+                <div class="skill-category">
+                    <h3 class="category-title">Programlama & Web</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-name">Python</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">C#</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">C++</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">HTML / CSS</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="75"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">JavaScript</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Responsive Web Tasarımı</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Araçlar & Teknolojiler</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-name">AutoCAD</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">CNC Freze & Tezgâh Kullanımı</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="70"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Teknik Çizim Okuma</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="65"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Git & Versiyon Kontrolü</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="60"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="skill-category">
+                    <h3 class="category-title">Diller</h3>
+                    <div class="skills-grid">
+                        <div class="skill-item">
+                            <div class="skill-name">Türkçe (Ana Dil)</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="100"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">İngilizce (B2 - Upper Intermediate)</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="60"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Kürtçe (2. Ana Dil)</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="90"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Almanca (A2)</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="35"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-name">Arapça (A1)</div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-progress="25"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="iletisim" class="section contact-section">
+        <div class="container">
+            <h2 class="section-title">İletişim</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <p class="contact-intro">
+                        Projeleriniz veya iş fırsatları için benimle iletişime geçmekten 
+                        çekinmeyin. Size en kısa sürede dönüş yapacağım.
+                    </p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img src="images/envelope-solid-full.svg" alt="E-posta ikonu" class="contact-icon-image">
+                            </div>
+                            <div class="contact-text">
+                                <h4>E-posta</h4>
+                                <p>cemiltekinn47@gmail.com</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img src="images/phone-solid-full.svg" alt="Telefon ikonu" class="contact-icon-image">
+                            </div>
+                            <div class="contact-text">
+                                <h4>Telefon</h4>
+                                <p>+90 539 239 46 82</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img src="images/house-solid-full.svg" alt="Ev ikonu" class="contact-icon-image">
+                            </div>
+                            <div class="contact-text">
+                                <h4>Konum</h4>
+                                <p>İstanbul, Türkiye</p>
+                            </div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <img src="images/linkedin-brands-solid-full.svg" alt="LinkedIn ikonu" class="contact-icon-image">
+                            </div>
+                            <div class="contact-text">
+                                <h4>LinkedIn</h4>
+                                <p>
+                                    <a href="https://www.linkedin.com/in/cemil-tekin-01b819259/" target="_blank" rel="noopener noreferrer">
+                                        linkedin.com/in/cemil-tekin-01b819259
+                                    </a>
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container">
+                    <form
+                        class="contact-form"
+                        action="https://formsubmit.co/cemiltekinn47@gmail.com"
+                        method="POST"
+                    >
+                        <input type="hidden" name="_subject" value="Portföy Sitesi Üzerinden Yeni Mesaj">
+                        <input type="hidden" name="_captcha" value="false">
+                        <input type="hidden" name="_template" value="table">
+
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-input"
+                                name="name"
+                                placeholder="Adınız Soyadınız"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="email"
+                                class="form-input"
+                                name="email"
+                                placeholder="E-posta Adresiniz"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="tel"
+                                class="form-input"
+                                name="phone"
+                                placeholder="Telefon Numaranız (Opsiyonel)"
+                                pattern="^[0-9+\s()-]*$"
+                            >
+                        </div>
+                        <div class="form-group">
+                            <input
+                                type="text"
+                                class="form-input"
+                                name="subject"
+                                placeholder="Konu"
+                                required
+                            >
+                        </div>
+                        <div class="form-group">
+                            <textarea
+                                class="form-input form-textarea"
+                                name="message"
+                                placeholder="Mesajınız"
+                                rows="5"
+                                required
+                            ></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-submit">Mesaj Gönder</button>
+                        <div id="form-status" class="form-status" aria-live="polite"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <p>&copy; 2024 Tüm hakları saklıdır. Cemil Tekin Portfolio
+                Designed by Cemil Tekin.
+            </p>
+        </div>
+    </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
