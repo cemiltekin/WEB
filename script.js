@@ -3,8 +3,17 @@ let preloadProgress = 0;
 const preloader = document.getElementById('preloader');
 const progressText = document.getElementById('progress-value');
 const progressFill = document.getElementById('progress-bar-fill');
+const pageParams = new URLSearchParams(window.location.search);
+const skipPreloader = pageParams.has('skipPreloader');
+const captureSection = pageParams.get('capture');
 
-if (preloader && progressText && progressFill) {
+if (skipPreloader && preloader && progressText && progressFill) {
+    preloadProgress = 100;
+    progressText.textContent = '100%';
+    progressFill.style.width = '100%';
+    preloader.classList.add('preloader-hide');
+    document.body.classList.remove('loading');
+} else if (preloader && progressText && progressFill) {
     const interval = setInterval(() => {
         const increment = Math.floor(Math.random() * 4) + 1; // 1–4 arası artış
         preloadProgress = Math.min(preloadProgress + increment, 100);
@@ -64,8 +73,11 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
         e.preventDefault();
 
         const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
-        const targetRect = target.getBoundingClientRect();
-        const targetY = targetRect.top + window.pageYOffset - (navbarHeight + 16);
+        const scrollTarget = target.classList.contains('section')
+            ? target.querySelector('.section-title') || target
+            : target;
+        const targetRect = scrollTarget.getBoundingClientRect();
+        const targetY = targetRect.top + window.pageYOffset - (navbarHeight + 20);
 
         smoothScrollTo(targetY);
 
@@ -133,27 +145,6 @@ document.addEventListener('click', (e) => {
     }
 });
 
-// Animate skill bars on scroll
-const observerOptions = {
-    threshold: 0.5,
-    rootMargin: '0px'
-};
-
-const skillObserver = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const progressBar = entry.target;
-            const progress = progressBar.getAttribute('data-progress');
-            progressBar.style.width = progress + '%';
-            skillObserver.unobserve(progressBar);
-        }
-    });
-}, observerOptions);
-
-document.querySelectorAll('.skill-progress').forEach(bar => {
-    skillObserver.observe(bar);
-});
-
 // Fade in animation for sections
 const fadeObserver = new IntersectionObserver((entries) => {
     entries.forEach(entry => {
@@ -218,6 +209,44 @@ document.querySelectorAll('.education-card').forEach(card => {
     educationObserver.observe(card);
 });
 
+if (skipPreloader) {
+    document.querySelectorAll('.section, .timeline-item, .education-card').forEach(element => {
+        element.style.opacity = '1';
+        element.style.transform = 'none';
+    });
+}
+
+// Expand all GitHub repositories inside the projects section
+const toggleAllProjects = document.getElementById('toggle-all-projects');
+const allProjectsPanel = document.getElementById('all-projects');
+
+if (toggleAllProjects && allProjectsPanel) {
+    toggleAllProjects.addEventListener('click', () => {
+        const willOpen = !allProjectsPanel.classList.contains('is-open');
+        const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+
+        if (willOpen) {
+            allProjectsPanel.hidden = false;
+            requestAnimationFrame(() => {
+                allProjectsPanel.classList.add('is-open');
+                toggleAllProjects.setAttribute('aria-expanded', 'true');
+                toggleAllProjects.textContent = 'Tüm Repoları Gizle';
+
+                const targetY = allProjectsPanel.getBoundingClientRect().top + window.pageYOffset - (navbarHeight + 16);
+                smoothScrollTo(targetY, 700);
+            });
+        } else {
+            allProjectsPanel.classList.remove('is-open');
+            toggleAllProjects.setAttribute('aria-expanded', 'false');
+            toggleAllProjects.textContent = 'Tüm Repoları Sayfada Göster';
+
+            setTimeout(() => {
+                allProjectsPanel.hidden = true;
+            }, 700);
+        }
+    });
+}
+
 // İletişim formu: Doğrudan FormSubmit'e gider (sayfa http/https ile açıldığında çalışır)
 
 // Parallax effect for hero section
@@ -261,9 +290,33 @@ const style = document.createElement('style');
 style.textContent = `
     .nav-link.active {
         color: var(--text-primary);
-    }
-    .nav-link.active::after {
-        width: 100%;
+        background: rgba(37, 99, 235, 0.12);
     }
 `;
 document.head.appendChild(style);
+
+if (skipPreloader && captureSection) {
+    setTimeout(() => {
+        const target = document.getElementById(captureSection);
+        if (!target) return;
+
+        if (captureSection !== 'anasayfa') {
+            document.querySelectorAll('section').forEach(section => {
+                if (section.id !== captureSection) {
+                    section.style.display = 'none';
+                }
+            });
+            target.style.display = 'block';
+            target.style.minHeight = '100vh';
+            target.style.paddingTop = '120px';
+            document.querySelector('.footer')?.style.setProperty('display', 'none');
+        }
+
+        const navbarHeight = document.querySelector('.navbar')?.offsetHeight || 80;
+        const scrollTarget = target.classList.contains('section')
+            ? target.querySelector('.section-title') || target
+            : target;
+        const targetY = scrollTarget.getBoundingClientRect().top + window.pageYOffset - (navbarHeight + 20);
+        window.scrollTo(0, targetY);
+    }, 300);
+}

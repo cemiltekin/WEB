@@ -14,15 +14,13 @@
     <!-- Preloader -->
     <div id="preloader">
         <div class="preloader-inner">
-            <img
-                id="preloader-logo"
-                src="images/logo.png.jpg"
-                alt="Cemil Tekin Logo"
-            />
-            <div id="progress-value">0%</div>
+            <p class="loader-eyebrow">Hoş Geldiniz...</p>
+            <h1 class="loader-title">Cemil Tekin</h1>
+            <p class="loader-subtitle">3. Sınıf Yazılım Mühendisliği Öğrencisi</p>
             <div class="progress-bar-wrapper">
                 <div class="progress-bar-fill" id="progress-bar-fill"></div>
             </div>
+            <div id="progress-value">0%</div>
         </div>
     </div>
 
@@ -35,6 +33,7 @@
                 <li><a href="#anasayfa" class="nav-link">Ana Sayfa</a></li>
                 <li><a href="#hakkimda" class="nav-link">Hakkımda</a></li>
                 <li><a href="#deneyim" class="nav-link">Deneyim</a></li>
+                <li><a href="#projeler" class="nav-link">Projeler</a></li>
                 <li><a href="#egitim" class="nav-link">Eğitim</a></li>
                 <li><a href="#beceriler" class="nav-link">Beceriler</a></li>
                 <li><a href="#iletisim" class="nav-link">İletişim</a></li>
@@ -106,7 +105,7 @@
                             <div class="stat-label">Yıl Profesyonel Deneyim</div>
                         </div>
                         <div class="stat-item">
-                            <div class="stat-number">12+</div>
+                            <div class="stat-number">6+</div>
                             <div class="stat-label">Akademik & Kişisel Proje</div>
                         </div>
                         <div class="stat-item">
@@ -180,6 +179,168 @@
         </div>
     </section>
 
+    <!-- Projects Section -->
+    <section id="projeler" class="section projects-section">
+        <div class="container">
+            <h2 class="section-title">Projeler</h2>
+            <p class="section-intro">
+                GitHub üzerinde paylaştığım projeler; yazılım mimarisi, web geliştirme ve yazılım güvenliği konularındaki
+                akademik ve kişisel çalışmalarımı yansıtır.
+            </p>
+            <div class="projects-grid">
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Full Stack SaaS</span>
+                        <h3 class="project-title">Restaurant SaaS</h3>
+                    </div>
+                    <p class="project-description">
+                        Restoranların menü, masa, sipariş, mutfak ekranı ve ödeme süreçlerini yönetmesi için geliştirilen
+                        full-stack SaaS projesi. Express API, Prisma/PostgreSQL altyapısı, React arayüzü ve gerçek zamanlı
+                        sipariş akışıyla operasyon yönetimini dijitalleştirir.
+                    </p>
+                    <div class="project-tech">
+                        <span>React</span>
+                        <span>TypeScript</span>
+                        <span>Express</span>
+                        <span>Prisma</span>
+                        <span>PostgreSQL</span>
+                        <span>Socket.IO</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/cemiltekin/restaurant-saas" target="_blank" rel="noopener noreferrer">
+                        GitHub'da İncele
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Software Architecture</span>
+                        <h3 class="project-title">PromoCatch</h3>
+                    </div>
+                    <p class="project-description">
+                        Kampanya ve fırsat takip sistemi olarak geliştirilen yazılım mimarisi projesi. Phase 1 ve Phase 2
+                        teslimlerini tek repoda toplayarak SAD dokümanları, 4+1 mimari görünümleri, FastAPI backend,
+                        SQLite veri katmanı ve frontend demo ekranlarını içerir.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>SQLite</span>
+                        <span>REST API</span>
+                        <span>Docker</span>
+                        <span>4+1 SAD</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/cemiltekin/promocatch" target="_blank" rel="noopener noreferrer">
+                        GitHub'da İncele
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Web & Backend</span>
+                        <h3 class="project-title">YummyFast - Online Catering Service</h3>
+                    </div>
+                    <p class="project-description">
+                        Online yemek/catering servisi için geliştirilmiş akademik bir yazılım mimarisi projesi. Sunum,
+                        kontrol, domain ve veri erişim katmanlarını ayırarak menü listeleme ve sipariş oluşturma gibi
+                        temel işlemleri daha sürdürülebilir bir backend yapısıyla ele alır.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>FastAPI</span>
+                        <span>REST API</span>
+                        <span>SQLite</span>
+                        <span>Layered Architecture</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/cemiltekin/SOFT-ARCH-PROJECT" target="_blank" rel="noopener noreferrer">
+                        GitHub'da İncele
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Web Tasarım</span>
+                        <h3 class="project-title">Kişisel Portföy Web Sitesi</h3>
+                    </div>
+                    <p class="project-description">
+                        İş başvuruları ve profesyonel tanıtım için geliştirilen statik portföy web sitesi. Kişisel
+                        bilgiler, deneyim, eğitim, beceriler, projeler ve iletişim formunu tek sayfada erişilebilir
+                        ve responsive bir yapıda sunar.
+                    </p>
+                    <div class="project-tech">
+                        <span>HTML</span>
+                        <span>CSS</span>
+                        <span>JavaScript</span>
+                        <span>Responsive Design</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/cemiltekin/WEB" target="_blank" rel="noopener noreferrer">
+                        GitHub'da İncele
+                    </a>
+                </article>
+
+                <article class="project-card">
+                    <div class="project-header">
+                        <span class="project-type">Yazılım Güvenliği</span>
+                        <h3 class="project-title">Software Security</h3>
+                    </div>
+                    <p class="project-description">
+                        Python ile yazılım güvenliği konularını çalışmak için oluşturulan akademik proje. Güvenli
+                        kodlama yaklaşımı, temel güvenlik kontrolleri ve yazılım geliştirme sürecinde risk farkındalığı
+                        üzerine odaklanır.
+                    </p>
+                    <div class="project-tech">
+                        <span>Python</span>
+                        <span>Security</span>
+                        <span>Secure Coding</span>
+                    </div>
+                    <a class="project-link" href="https://github.com/cemiltekin/Software-Security" target="_blank" rel="noopener noreferrer">
+                        GitHub'da İncele
+                    </a>
+                </article>
+            </div>
+            <div class="projects-footer">
+                <button class="btn btn-secondary projects-toggle" type="button" id="toggle-all-projects" aria-expanded="false" aria-controls="all-projects">
+                    Tüm Repoları Sayfada Göster
+                </button>
+            </div>
+            <div class="all-projects-panel" id="all-projects" hidden>
+                <div class="all-projects-header">
+                    <span class="project-type">GitHub Repositories</span>
+                    <h3>Tüm Repolar</h3>
+                    <p>
+                        GitHub hesabımdaki güncel herkese açık repoları burada listeledim. Her karta tıklayarak ilgili repo detayına ulaşabilirsiniz.
+                    </p>
+                </div>
+                <div class="all-projects-grid">
+                    <a class="repo-card" href="https://github.com/cemiltekin/restaurant-saas" target="_blank" rel="noopener noreferrer">
+                        <span class="repo-language">React / Express / Prisma</span>
+                        <h4>restaurant-saas</h4>
+                        <p>Restoran operasyonları için menü, masa, sipariş, ödeme ve mutfak ekranı akışlarını yöneten full-stack SaaS projesi.</p>
+                    </a>
+                    <a class="repo-card" href="https://github.com/cemiltekin/promocatch" target="_blank" rel="noopener noreferrer">
+                        <span class="repo-language">Python / FastAPI</span>
+                        <h4>promocatch</h4>
+                        <p>Kampanya takip sistemi için Phase 1 ve Phase 2 SAD dokümanları, REST API, frontend demo ve sunum dosyalarını içeren mimari proje.</p>
+                    </a>
+                    <a class="repo-card" href="https://github.com/cemiltekin/Software-Security" target="_blank" rel="noopener noreferrer">
+                        <span class="repo-language">Python</span>
+                        <h4>Software-Security</h4>
+                        <p>Yazılım güvenliği, güvenli kodlama ve temel güvenlik kontrolleri üzerine akademik çalışma.</p>
+                    </a>
+                    <a class="repo-card" href="https://github.com/cemiltekin/SOFT-ARCH-PROJECT" target="_blank" rel="noopener noreferrer">
+                        <span class="repo-language">Python</span>
+                        <h4>SOFT-ARCH-PROJECT</h4>
+                        <p>YummyFast online catering servisi için katmanlı mimari, REST API ve SQLite tabanlı backend projesi.</p>
+                    </a>
+                    <a class="repo-card" href="https://github.com/cemiltekin/WEB" target="_blank" rel="noopener noreferrer">
+                        <span class="repo-language">HTML / CSS / JavaScript</span>
+                        <h4>WEB</h4>
+                        <p>İş başvuruları için hazırlanmış responsive kişisel portföy sitesi; modern arayüz, mobil uyum ve iletişim alanı içerir.</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Education Section -->
     <section id="egitim" class="section education-section">
         <div class="container">
@@ -229,110 +390,100 @@
     <section id="beceriler" class="section skills-section">
         <div class="container">
             <h2 class="section-title">Beceriler</h2>
+            <p class="section-intro">
+                Teknik becerilerimi yüzdelik oranlar yerine, projelerde kullanabildiğim alanlar ve çalışma seviyeleriyle özetledim.
+            </p>
             <div class="skills-container">
                 <div class="skill-category">
                     <h3 class="category-title">Programlama & Web</h3>
                     <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-name">Python</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
+                        <article class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name">Python</div>
+                                <span class="skill-level">Orta-İyi</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">C#</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="65"></div>
+                            <p class="skill-note">Backend mantığı, veri işleme ve akademik projelerde aktif kullanım.</p>
+                        </article>
+                        <article class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name">HTML / CSS</div>
+                                <span class="skill-level">İyi</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">C++</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="60"></div>
+                            <p class="skill-note">Responsive, modern ve kullanıcı odaklı arayüz geliştirme.</p>
+                        </article>
+                        <article class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name">JavaScript</div>
+                                <span class="skill-level">Orta-İyi</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">HTML / CSS</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="75"></div>
+                            <p class="skill-note">Etkileşimli arayüzler, form davranışları ve sayfa animasyonları.</p>
+                        </article>
+                        <article class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name">C# / C++</div>
+                                <span class="skill-level">Temel-Orta</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">JavaScript</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Responsive Web Tasarımı</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
-                            </div>
-                        </div>
+                            <p class="skill-note">Algoritma, nesne yönelimli programlama ve yazılım temelleri.</p>
+                        </article>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3 class="category-title">Araçlar & Teknolojiler</h3>
                     <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-name">AutoCAD</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="65"></div>
+                        <article class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name">Git & GitHub</div>
+                                <span class="skill-level">Aktif Kullanım</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">CNC Freze & Tezgâh Kullanımı</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="70"></div>
+                            <p class="skill-note">Repo yönetimi, versiyon takibi ve proje paylaşımı.</p>
+                        </article>
+                        <article class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name">FastAPI / REST API</div>
+                                <span class="skill-level">Proje Deneyimi</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Teknik Çizim Okuma</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="65"></div>
+                            <p class="skill-note">Katmanlı mimari ve backend endpoint geliştirme pratiği.</p>
+                        </article>
+                        <article class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name">AutoCAD & Teknik Çizim</div>
+                                <span class="skill-level">Uygulamalı</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Git & Versiyon Kontrolü</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="60"></div>
+                            <p class="skill-note">Teknik çizim okuma, üretim süreçlerini anlama ve detay takibi.</p>
+                        </article>
+                        <article class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name">CNC Freze</div>
+                                <span class="skill-level">Saha Deneyimi</span>
                             </div>
-                        </div>
+                            <p class="skill-note">Hassas üretim, operasyon disiplini ve teknik süreç farkındalığı.</p>
+                        </article>
                     </div>
                 </div>
                 <div class="skill-category">
                     <h3 class="category-title">Diller</h3>
                     <div class="skills-grid">
-                        <div class="skill-item">
-                            <div class="skill-name">Türkçe (Ana Dil)</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="100"></div>
+                        <article class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name">Türkçe</div>
+                                <span class="skill-level">Ana Dil</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">İngilizce (B2 - Upper Intermediate)</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="60"></div>
+                            <p class="skill-note">Profesyonel iletişim, sunum ve yazılı ifade.</p>
+                        </article>
+                        <article class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name">İngilizce</div>
+                                <span class="skill-level">B2</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Kürtçe (2. Ana Dil)</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="90"></div>
+                            <p class="skill-note">Teknik dokümantasyon okuma ve akademik/proje iletişimi.</p>
+                        </article>
+                        <article class="skill-item">
+                            <div class="skill-header">
+                                <div class="skill-name">Almanca / Arapça</div>
+                                <span class="skill-level">Temel</span>
                             </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Almanca (A2)</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="35"></div>
-                            </div>
-                        </div>
-                        <div class="skill-item">
-                            <div class="skill-name">Arapça (A1)</div>
-                            <div class="skill-bar">
-                                <div class="skill-progress" data-progress="25"></div>
-                            </div>
-                        </div>
+                            <p class="skill-note">Başlangıç düzeyinde iletişim ve öğrenme süreci.</p>
+                        </article>
                     </div>
                 </div>
             </div>
@@ -458,8 +609,9 @@
     <!-- Footer -->
     <footer class="footer">
         <div class="container">
-            <p>&copy; 2024 Tüm hakları saklıdır. Cemil Tekin Portfolio
+            <p>&copy; 2026 Tüm hakları saklıdır. Cemil Tekin Portfolio
                 Designed by Cemil Tekin.
+                SSL ile korunan güvenli bağlantı üzerinden gönderilir.
             </p>
         </div>
     </footer>
