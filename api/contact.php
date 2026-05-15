@@ -48,5 +48,9 @@ try {
 
     json_response(['ok' => true, 'message' => 'Mesajınız başarıyla gönderildi.']);
 } catch (Throwable $error) {
-    json_response(['ok' => false, 'message' => 'Mesaj kaydedilemedi. Lütfen daha sonra tekrar deneyin.'], 500);
+    $payload = ['ok' => false, 'message' => 'Mesaj kaydedilemedi. Lütfen daha sonra tekrar deneyin.'];
+    if (isset($_GET['debug']) && $_GET['debug'] === '1') {
+        $payload['error'] = $error->getMessage();
+    }
+    json_response($payload, 500);
 }

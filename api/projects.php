@@ -11,9 +11,15 @@ try {
 
     json_response([
         'ok' => true,
-        'featured' => array_values(array_filter($projects, fn (array $project) => $project['is_featured'])),
+        'featured' => array_values(array_filter($projects, function (array $project): bool {
+            return (bool) $project['is_featured'];
+        })),
         'repositories' => $projects,
     ]);
 } catch (Throwable $error) {
-    json_response(['ok' => false, 'message' => 'Projects could not be loaded.'], 500);
+    $payload = ['ok' => false, 'message' => 'Projects could not be loaded.'];
+    if (isset($_GET['debug']) && $_GET['debug'] === '1') {
+        $payload['error'] = $error->getMessage();
+    }
+    json_response($payload, 500);
 }
