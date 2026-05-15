@@ -187,7 +187,7 @@
                 GitHub üzerinde paylaştığım projeler; yazılım mimarisi, web geliştirme ve yazılım güvenliği konularındaki
                 akademik ve kişisel çalışmalarımı yansıtır.
             </p>
-            <div class="projects-grid">
+            <div class="projects-grid" id="featured-projects" data-dynamic-projects="featured">
                 <article class="project-card">
                     <div class="project-header">
                         <span class="project-type">Full Stack SaaS</span>
@@ -307,10 +307,10 @@
                     <span class="project-type">GitHub Repositories</span>
                     <h3>Tüm Repolar</h3>
                     <p>
-                        GitHub hesabımdaki güncel herkese açık repoları burada listeledim. Her karta tıklayarak ilgili repo detayına ulaşabilirsiniz.
+                        GitHub hesabımdaki güncel repoları burada listeledim. Her karta tıklayarak ilgili repo detayına ulaşabilirsiniz.
                     </p>
                 </div>
-                <div class="all-projects-grid">
+                <div class="all-projects-grid" id="repo-projects" data-dynamic-projects="repositories">
                     <a class="repo-card" href="https://github.com/cemiltekin/restaurant-saas" target="_blank" rel="noopener noreferrer">
                         <span class="repo-language">React / Express / Prisma</span>
                         <h4>restaurant-saas</h4>
@@ -544,15 +544,7 @@
                     </div>
                 </div>
                 <div class="contact-form-container">
-                    <form
-                        class="contact-form"
-                        action="https://formsubmit.co/cemiltekinn47@gmail.com"
-                        method="POST"
-                    >
-                        <input type="hidden" name="_subject" value="Portföy Sitesi Üzerinden Yeni Mesaj">
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_template" value="table">
-
+                    <form class="contact-form" id="contact-form">
                         <div class="form-group">
                             <input
                                 type="text"

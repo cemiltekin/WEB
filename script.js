@@ -216,6 +216,75 @@ if (skipPreloader) {
     });
 }
 
+function escapeHtml(value) {
+    const div = document.createElement('div');
+    div.textContent = value ?? '';
+    return div.innerHTML;
+}
+
+function projectCard(project) {
+    const technologies = (project.technologies || [])
+        .map(tech => `<span>${escapeHtml(tech)}</span>`)
+        .join('');
+
+    return `
+        <article class="project-card">
+            <div class="project-header">
+                <span class="project-type">${escapeHtml(project.type)}</span>
+                <h3 class="project-title">${escapeHtml(project.title)}</h3>
+            </div>
+            <p class="project-description">${escapeHtml(project.description)}</p>
+            <div class="project-tech">${technologies}</div>
+            <a class="project-link" href="${escapeHtml(project.github_url)}" target="_blank" rel="noopener noreferrer">
+                GitHub'da İncele
+            </a>
+        </article>
+    `;
+}
+
+function repoCard(project) {
+    const technologies = (project.technologies || []).slice(0, 3).join(' / ');
+    return `
+        <a class="repo-card" href="${escapeHtml(project.github_url)}" target="_blank" rel="noopener noreferrer">
+            <span class="repo-language">${escapeHtml(technologies || project.type)}</span>
+            <h4>${escapeHtml(project.title)}</h4>
+            <p>${escapeHtml(project.description)}</p>
+        </a>
+    `;
+}
+
+async function loadProjects() {
+    const featuredContainer = document.getElementById('featured-projects');
+    const repoContainer = document.getElementById('repo-projects');
+    if (!featuredContainer || !repoContainer) return;
+
+    try {
+        const response = await fetch('api/projects.php', {
+            headers: { Accept: 'application/json' },
+        });
+        if (!response.ok) {
+            throw new Error('Projects API failed');
+        }
+
+        const payload = await response.json();
+        if (!payload.ok) {
+            throw new Error(payload.message || 'Projects could not be loaded');
+        }
+
+        if (Array.isArray(payload.featured) && payload.featured.length > 0) {
+            featuredContainer.innerHTML = payload.featured.map(projectCard).join('');
+        }
+
+        if (Array.isArray(payload.repositories) && payload.repositories.length > 0) {
+            repoContainer.innerHTML = payload.repositories.map(repoCard).join('');
+        }
+    } catch (error) {
+        console.warn('Static project cards are being used as fallback.', error);
+    }
+}
+
+loadProjects();
+
 // Expand all GitHub repositories inside the projects section
 const toggleAllProjects = document.getElementById('toggle-all-projects');
 const allProjectsPanel = document.getElementById('all-projects');
@@ -247,7 +316,43 @@ if (toggleAllProjects && allProjectsPanel) {
     });
 }
 
-// İletişim formu: Doğrudan FormSubmit'e gider (sayfa http/https ile açıldığında çalışır)
+// Dynamic contact form submission
+const contactForm = document.getElementById('contact-form');
+const formStatus = document.getElementById('form-status');
+
+if (contactForm && formStatus) {
+    contactForm.addEventListener('submit', async (event) => {
+        event.preventDefault();
+        formStatus.textContent = 'Mesajınız gönderiliyor...';
+        formStatus.className = 'form-status is-info';
+
+        const formData = new FormData(contactForm);
+        const payload = Object.fromEntries(formData.entries());
+
+        try {
+            const response = await fetch('api/contact.php', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    Accept: 'application/json',
+                },
+                body: JSON.stringify(payload),
+            });
+            const result = await response.json();
+
+            if (!response.ok || !result.ok) {
+                throw new Error(result.message || 'Mesaj gönderilemedi.');
+            }
+
+            formStatus.textContent = result.message || 'Mesajınız başarıyla gönderildi.';
+            formStatus.className = 'form-status is-success';
+            contactForm.reset();
+        } catch (error) {
+            formStatus.textContent = error.message || 'Mesaj gönderilirken bir hata oluştu.';
+            formStatus.className = 'form-status is-error';
+        }
+    });
+}
 
 // Parallax effect for hero section
 window.addEventListener('scroll', () => {

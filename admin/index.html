@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portföy Admin Paneli</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-page">
+    <header class="admin-header">
+        <div>
+            <p class="eyebrow">Cemil Tekin Portfolio</p>
+            <h1>Admin Paneli</h1>
+        </div>
+        <div class="admin-actions">
+            <a href="../index.html" target="_blank" rel="noopener noreferrer">Siteyi Aç</a>
+            <button type="button" id="logout-button">Çıkış Yap</button>
+        </div>
+    </header>
+
+    <main class="admin-layout">
+        <section class="panel">
+            <div class="panel-header">
+                <div>
+                    <h2>Projeler</h2>
+                    <p>Projeler bölümündeki kartları buradan yönetin.</p>
+                </div>
+                <button type="button" id="new-project-button">Yeni Proje</button>
+            </div>
+            <form id="project-form" class="admin-form grid-form">
+                <input type="hidden" name="id">
+                <label>
+                    Başlık
+                    <input type="text" name="title" required>
+                </label>
+                <label>
+                    Tür
+                    <input type="text" name="type" required>
+                </label>
+                <label class="full">
+                    Açıklama
+                    <textarea name="description" rows="4" required></textarea>
+                </label>
+                <label class="full">
+                    Teknolojiler (virgülle ayırın)
+                    <input type="text" name="technologies" required>
+                </label>
+                <label class="full">
+                    GitHub URL
+                    <input type="url" name="github_url" required>
+                </label>
+                <label>
+                    Sıra
+                    <input type="number" name="sort_order" value="0">
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="is_featured" checked>
+                    Öne çıkan kartlarda göster
+                </label>
+                <label class="checkbox-label">
+                    <input type="checkbox" name="is_visible" checked>
+                    Yayında
+                </label>
+                <div class="form-actions full">
+                    <button type="submit">Kaydet</button>
+                    <button type="button" class="secondary" id="reset-project-form">Temizle</button>
+                </div>
+                <p id="project-status" class="status-text full" aria-live="polite"></p>
+            </form>
+            <div id="projects-list" class="admin-list"></div>
+        </section>
+
+        <section class="panel">
+            <div class="panel-header">
+                <div>
+                    <h2>Mesajlar</h2>
+                    <p>İletişim formundan gelen mesajları görüntüleyin.</p>
+                </div>
+            </div>
+            <div id="messages-list" class="admin-list"></div>
+        </section>
+    </main>
+
+    <script src="admin.js"></script>
+</body>
+</html>

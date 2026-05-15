@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portföy Admin Girişi</title>
+    <link rel="stylesheet" href="admin.css">
+</head>
+<body class="admin-auth-page">
+    <main class="auth-card">
+        <p class="eyebrow">Cemil Tekin Portfolio</p>
+        <h1>Admin Girişi</h1>
+        <p class="muted">Projeleri ve gelen mesajları yönetmek için giriş yapın.</p>
+        <form id="login-form" class="admin-form">
+            <label>
+                Kullanıcı Adı
+                <input type="text" name="username" autocomplete="username" required>
+            </label>
+            <label>
+                Şifre
+                <input type="password" name="password" autocomplete="current-password" required>
+            </label>
+            <button type="submit">Giriş Yap</button>
+            <p id="login-status" class="status-text" aria-live="polite"></p>
+        </form>
+    </main>
+    <script src="admin.js"></script>
+</body>
+</html>

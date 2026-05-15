@@ -86,11 +86,21 @@ Ardından **http://localhost:8080** adresini açın.
 - Safari (son 2 versiyon)
 - Edge (son 2 versiyon)
 
+## Dinamik Yapı
+
+Site artık PHP + MySQL destekli dinamik yapıya hazırlanmıştır:
+
+- Projeler `api/projects.php` üzerinden veritabanından yüklenir.
+- İletişim formu `api/contact.php` üzerinden mesajları veritabanına kaydeder.
+- Admin paneli `admin/login.html` üzerinden projeleri ve mesajları yönetir.
+
+Kurulum için `DEPLOYMENT_DYNAMIC.md` dosyasındaki cPanel adımlarını takip edin.
+
 ## Notlar
 
-- Form gönderimi şu anda demo amaçlıdır. Gerçek form işlevselliği için bir backend entegrasyonu gereklidir.
+- `api/config.php` canlı sunucuda oluşturulmalıdır; repoda sadece `api/config.example.php` bulunur.
 - Görseller yüklenmediğinde boş alanlar görünecektir. Lütfen görselleri eklediğinizden emin olun.
-- Site tamamen statiktir ve herhangi bir sunucu gerektirmez.
+- PHP + MySQL kurulumu yapılmadan statik fallback proje kartları gösterilir.
 
 ## Lisans
 

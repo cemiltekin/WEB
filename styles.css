@@ -1158,12 +1158,18 @@ body.loading {
     color: var(--text-secondary);
 }
 
-.form-status.success {
+.form-status.success,
+.form-status.is-success {
     color: #16a34a;
 }
 
-.form-status.error {
+.form-status.error,
+.form-status.is-error {
     color: #dc2626;
+}
+
+.form-status.is-info {
+    color: var(--accent-blue);
 }
 
 /* Footer */
